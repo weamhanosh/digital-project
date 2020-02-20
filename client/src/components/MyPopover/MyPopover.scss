@@ -1,0 +1,22 @@
+@import '~antd/dist/antd.css';
+
+.text_area{
+    width: 1300px;
+}
+
+p {font-size: 17px}
+
+
+.lines{
+    width: 1252px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+    margin-right: 24px;
+    justify-content: space-evenly;
+}
+
+// .file_upload{
+//     display: flex;
+//     justify-content: space-evenly;
+// }

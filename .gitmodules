@@ -1,0 +1,3 @@
+[submodule "digital-project-front-end"]
+	path = digital-project-front-end
+	url = https://github.com/weamhanosh/digital-project-front-end.git
