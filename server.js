@@ -2,10 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const editor = require('./routes/api/editor');
 
 const app = express();
+
+app.use(cors())
 
 //body parser for json. must be done before API routes
 app.use(bodyParser.json({ limit: '10mb' }));

@@ -125,5 +125,23 @@ router.post('/download', function (req, res) {
 
 });
 
+router.get('/abc', function (req, res) {
+
+  // let content = req.body.text;
+          
+  AnswerModel
+  .findOne({text: ""})
+  .then(doc => {
+    // if (doc != null) {
+      console.log('TEST ABC');
+      res.json({'dummy': 1});
+    // } else {
+      // console.log("no entry to download")
+    // }
+  });
+  
+
+});
+
 
 module.exports = router;
