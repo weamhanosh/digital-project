@@ -159,8 +159,7 @@ const mapStateToProps = (state) => {
     return {
         analysis_as_is: state['myAnalyzeButton'].get('analysis_as_is'),
         selected_options: state['myFilter'].get('selected_options'),
-        answer: state['myAnalyzeButton'].get('answer'),
-        text: state['myEditor'].get('text')
+        answer: state['myAnalyzeButton'].get('answer')
     }
 };
 
