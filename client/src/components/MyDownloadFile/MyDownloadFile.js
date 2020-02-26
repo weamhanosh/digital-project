@@ -131,23 +131,23 @@ class MyDownloadFile extends React.Component {
         return(
             <div className="content-section implementation" style={{direction: 'rtl'}}>
                 <div className="lines" id="container" style={{direction: 'ltr'}}>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("analysis.txt", this.props.analysis_as_is)}}>הורדת ניתוח</Button>
-                    <p></p>
                     <Button type="primary" icon="download" onClick={(_e) => {download("filtered_analysis.txt", filter_analysis(this.props.analysis_as_is, this.props.selected_options))}}>הורדת ניתוח אחרי פילטר</Button>
+                    <p></p>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("analysis.txt", this.props.analysis_as_is)}}>הורדת ניתוח</Button>
                 </div>
                 <p></p>
                 <div className="lines" id="container" style={{direction: 'ltr'}}>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma.txt", get_lemma(this.props.answer))}}>הורדת לימות</Button>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma_with_analysis.txt", get_lemma_with_analysis(this.props.answer))}}>הורדת לימות עם ניתוח</Button>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma_with_filters.txt", get_lemma_with_filters(this.props.answer, this.props.selected_options))}}>הורדת לימות אחרי פילטר</Button>
                     <Button type="primary" icon="download" onClick={(_e) => {download("lemma_with_analysis_and_filters.txt", get_lemma_with_analysis_and_filters(this.props.answer, this.props.selected_options))}}>הורדת לימות עם ניתוח ואחרי פילטר</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma_with_filters.txt", get_lemma_with_filters(this.props.answer, this.props.selected_options))}}>הורדת לימות אחרי פילטר</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma_with_analysis.txt", get_lemma_with_analysis(this.props.answer))}}>הורדת לימות עם ניתוח</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lemma.txt", get_lemma(this.props.answer))}}>הורדת לימות</Button>
 			    </div>
                 <p></p>
                 <div className="lines" id="container" style={{direction: 'ltr'}}>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme.txt", get_lexeme(this.props.answer))}}>הורדת לקסמות</Button>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme_with_analysis.txt", get_lexeme_with_analysis(this.props.answer))}}>הורדת לקסמות עם ניתוח</Button>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme_with_filters.txt", get_lexeme_with_filters(this.props.answer, this.props.selected_options))}}>הורדת לקסמות אחרי פילטר</Button>
                     <Button type="primary" icon="download" onClick={(_e) => {download("lexeme_with_analysis_and_filters.txt", get_lexeme_with_analysis_and_filters(this.props.answer, this.props.selected_options))}}>הורדת לקסמות עם ניתוח ואחרי פילטר</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme_with_filters.txt", get_lexeme_with_filters(this.props.answer, this.props.selected_options))}}>הורדת לקסמות אחרי פילטר</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme_with_analysis.txt", get_lexeme_with_analysis(this.props.answer))}}>הורדת לקסמות עם ניתוח</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("lexeme.txt", get_lexeme(this.props.answer))}}>הורדת לקסמות</Button>
                 </div>
                 <p></p>
             </div>
