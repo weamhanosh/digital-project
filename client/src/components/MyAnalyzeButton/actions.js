@@ -3,8 +3,7 @@ import { MyAnalyzeButtonActionsConstants } from './constants';
 function uploadAction(text) {
   return {
     type: MyAnalyzeButtonActionsConstants.UPLOAD_ACTION,
-    // uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/upload',
-    uri: 'http://127.0.0.1:8000/api/upload',
+    uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/upload',
     payload: text
   }
 }
