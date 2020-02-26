@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import './MyEditor.scss';
 
-import { Input, Icon, Popover } from 'antd';
+import { Input } from 'antd';
 const { TextArea } = Input;
 
 class MyEditor extends React.Component {
@@ -19,21 +19,7 @@ class MyEditor extends React.Component {
                         onChange={this.props.EditTextEventHandler}
                         placeholder="טקסט לניתוח"
                         autoSize
-                    />
-                    <Popover
-                        title={<p style={{color: "#2e81ff", direction: 'rtl'}}>הוראות שימוש</p>}
-                        content={
-                            <div>
-                                <p style={{color: "#2e81ff", direction: 'rtl'}}>אבג</p>
-                                <p style={{color: "#2e81ff", direction: 'rtl'}}>דהו</p>
-                            </div>
-                        }
-                        trigger="click"
-                        // trigger="hover"
-                    >
-                        <Icon type="question-circle" />
-                    </Popover>
-                    
+                    />                    
                 </div>
                 <p></p>
             </div>

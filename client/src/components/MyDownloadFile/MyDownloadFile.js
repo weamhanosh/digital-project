@@ -131,9 +131,9 @@ class MyDownloadFile extends React.Component {
         return(
             <div className="content-section implementation" style={{direction: 'rtl'}}>
                 <div className="lines" id="container" style={{direction: 'ltr'}}>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("filtered_analysis.txt", filter_analysis(this.props.analysis_as_is, this.props.selected_options))}}>הורדת ניתוח אחרי פילטר</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("filtered_analysis.txt", filter_analysis(this.props.analysis_as_is, this.props.selected_options))}}>הורדת כל הניתוח אחרי פילטר</Button>
                     <p></p>
-                    <Button type="primary" icon="download" onClick={(_e) => {download("analysis.txt", this.props.analysis_as_is)}}>הורדת ניתוח</Button>
+                    <Button type="primary" icon="download" onClick={(_e) => {download("analysis.txt", this.props.analysis_as_is)}}>הורדת כל הניתוח</Button>
                 </div>
                 <p></p>
                 <div className="lines" id="container" style={{direction: 'ltr'}}>

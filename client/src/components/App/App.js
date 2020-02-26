@@ -7,7 +7,7 @@ import MyAnalyzeButton from "../MyAnalyzeButton";
 import MyPopover from "../MyPopover";
 import MyFilter from "../MyFilter";
 import MyDownloadFile from '../MyDownloadFile';
-import { Button, Result } from 'antd';
+import { Button, Result, Icon, Popover } from 'antd';
 
 class App extends React.Component {
 
@@ -21,6 +21,23 @@ class App extends React.Component {
                         <img src={logo} className="App-logo" alt="logo"/>
                     </a>
                 </div>
+                <Popover
+                        title={<p style={{color: "#2e81ff", direction: 'rtl'}}>הוראות שימוש</p>}
+                        content={
+                            <div>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}>יש להזין טקסט עבורו נדרש הניתוח וללחוץ על "נתח"</p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}>ניתן לסנן את תוצאות הניתוח באמצעות "אפשרויות חיפוש"</p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}>לאחר קבלת תוצאות הניתוח יש להזיז את העכבר אל התוצאה הרצויה על מנת לקבל את הניתוח עבור תוצאה זו</p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}>ניתן ללחוץ על אחד מכפתורי ההורדה על מנת להוריד את הניתוח המבוקש</p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}></p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}></p>
+                            </div>
+                        }
+                        // trigger="click"
+                        trigger="hover"
+                    >
+                        <Icon type="question-circle" />
+                    </Popover>
                 <MyEditor/>
                 <MyFilter/>
                 <MyAnalyzeButton/>
