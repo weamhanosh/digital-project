@@ -1,6 +1,6 @@
 # digital-project
 
-Web application for running words tagger.
+Web application for running words tagger (in Hebrew).
 
 Before running the application make sure MongoDB is installed.
 
