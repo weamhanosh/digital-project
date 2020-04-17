@@ -49,8 +49,8 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(MyAnalyzeButtonActions.uploadAction(text));
         },
         UploadAndAnalyseFilesEventHandler: (names, texts) => {
-            console.log(names)
-            console.log(texts)
+            // console.log(names)
+            // console.log(texts)
             dispatch(MyAnalyzeButtonActions.uploadFilesAction(names, texts));
         }
     }

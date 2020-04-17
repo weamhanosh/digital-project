@@ -14,7 +14,7 @@ function* upload(action){
         body: JSON.stringify({"text": action.payload})
       });
     const json = yield call([res, 'json']); //retrieve body of response
-    console.log('ServerReturned=', json);
+    // console.log('ServerReturned=', json);
     yield put(MyAnalyzeButtonActions.doneAction(json));
   } catch (e) {
     // console.log("received error:");
@@ -39,7 +39,7 @@ function* uploadFiles(action){
           body: JSON.stringify(action.payload)
         });
       const json = yield call([res, 'json']); //retrieve body of response
-      console.log('ServerReturned=', json);
+      // console.log('ServerReturned=', json);
       yield put(MyAnalyzeButtonActions.doneFilesAction(json));
     } catch (e) {
       // console.log("received error:");

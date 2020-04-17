@@ -152,7 +152,7 @@ class MyPopover extends React.Component {
     words_renderer_array(answers, file_names, text_array){
         let res = [];
         for (let i = 0; i < answers.length; i++) {
-            console.log(answers[i])
+            // console.log(answers[i])
             res[i] = 
             <div>
                 
@@ -172,7 +172,7 @@ class MyPopover extends React.Component {
                 {this.words_renderer(answers[i], file_names[i])}
             </div>
         }
-        console.log(res);
+        // console.log(res);
         return res;
     }
     

@@ -3,8 +3,8 @@ import { MyAnalyzeButtonActionsConstants } from './constants';
 function uploadAction(text) {
   return {
     type: MyAnalyzeButtonActionsConstants.UPLOAD_ACTION,
-    // uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/upload',
-    uri: 'http://localhost:8000/api/upload',
+    uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/upload',
+    // uri: 'http://localhost:8000/api/upload',
     payload: text
   }
 }
@@ -12,8 +12,8 @@ function uploadAction(text) {
 function uploadFilesAction(names, texts) {
   return {
     type: MyAnalyzeButtonActionsConstants.UPLOAD_FILES_ACTION,
-    // uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/upload',
-    uri: 'http://localhost:8000/api/uploadFiles',
+    uri: 'http://ec2-52-214-73-236.eu-west-1.compute.amazonaws.com:8000/api/uploadFiles',
+    // uri: 'http://localhost:8000/api/uploadFiles',
     payload: {
       names: names,
       texts: texts
