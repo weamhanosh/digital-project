@@ -27,7 +27,7 @@ class App extends React.Component {
                         title={<p style={{color: "#2e81ff", direction: 'rtl'}}>הוראות שימוש</p>}
                         content={
                             <div>
-                                <p style={{color: "#2e81ff", direction: 'rtl'}}>יש להזין טקסט עבורו נדרש הניתוח או להעלות קובץ txt וללחוץ על "נתח"</p>
+                                <p style={{color: "#2e81ff", direction: 'rtl'}}>יש להזין טקסט עבורו נדרש הניתוח או להעלות קבצי txt וללחוץ על "נתח"</p>
                                 <p style={{color: "#2e81ff", direction: 'rtl'}}>ניתן לסנן את תוצאות הניתוח באמצעות "אפשרויות חיפוש"</p>
                                 <p style={{color: "#2e81ff", direction: 'rtl'}}>לאחר קבלת תוצאות הניתוח יש להזיז את העכבר אל התוצאה הרצויה על מנת לקבל את הניתוח עבור תוצאה זו</p>
                                 <p style={{color: "#2e81ff", direction: 'rtl'}}>ניתן ללחוץ על אחד מכפתורי ההורדה על מנת להוריד את הניתוח המבוקש</p>
