@@ -18,7 +18,7 @@ class MyAnalyzeButton extends React.Component {
                     <p></p>
                     <Button type="primary" icon="experiment"
                         disabled={(this.props.render_progress_bar && (!this.props.done)) || (this.props.failed)}
-                        onClick={() => {this.props.UploadAndAnalyseTextEventHandler(this.props.text)}} style={{direction: 'ltr'}}>
+                        onClick={() => {this.props.render_editor ? this.props.UploadAndAnalyseTextEventHandler(this.props.text) : this.props.UploadAndAnalyseFilesEventHandler(this.props.names, this.props.texts)}} style={{direction: 'ltr'}}>
                             נתח
                     </Button>
                 </div>
@@ -34,6 +34,9 @@ const mapStateToProps = (state) => {
     return {
         render_progress_bar: state['myAnalyzeButton'].get('render_progress_bar'),
         text: state['myEditor'].get('text'),
+        names: state['myFileUpload'].get('names'),
+        texts: state['myFileUpload'].get('texts'),
+        render_editor: state['myRadio'].get('render_editor'),
         answer: state['myAnalyzeButton'].get('answer'),
         done: state['myAnalyzeButton'].get('done'),
         failed: state['myAnalyzeButton'].get('failed')
@@ -44,6 +47,11 @@ const mapDispatchToProps = (dispatch) => {
     return {
         UploadAndAnalyseTextEventHandler: (text) => {
             dispatch(MyAnalyzeButtonActions.uploadAction(text));
+        },
+        UploadAndAnalyseFilesEventHandler: (names, texts) => {
+            console.log(names)
+            console.log(texts)
+            dispatch(MyAnalyzeButtonActions.uploadFilesAction(names, texts));
         }
     }
 };

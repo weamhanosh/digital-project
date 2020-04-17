@@ -5,6 +5,13 @@ export default {
     myEditor: Map({
         text: "",
     }),
+    myRadio: Map({
+        render_editor: true,
+    }),
+    myFileUpload: Map({
+        names: [],
+        texts: []
+    }),
     myAnalyzeButton: Map({
         render_progress_bar: false,
         done: false,
@@ -15,7 +22,13 @@ export default {
             analysed_text_arr: []
         },
         newline_counter: 0,
-        line_length_arr: []
+        line_length_arr: [],
+        answer_array: [],
+        analysis_as_is_array: [],
+        newline_counter_array: [],
+        line_length_arr_array: [],
+        file_name_array: [],
+        text_array: []
     }),
     myFilter: Map({
         options: [
@@ -72,7 +85,7 @@ export default {
         ],
         selected_options: [],
     }),
-    myPopover: Map({ }),
-    app: Map({ })
+    app: Map({ }),
+    myPopover: Map({ })
     
 };

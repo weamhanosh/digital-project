@@ -6,10 +6,6 @@
 
 p {font-size: 17px}
 
-mark {
-    background-color: rgb(255, 0, 255);
-    // color: black;
-  }
 
 .lines{
     width: 1252px;
@@ -20,7 +16,9 @@ mark {
     justify-content: space-evenly;
 }
 
-// .file_upload{
-//     display: flex;
-//     justify-content: space-evenly;
-// }
+.file_upload{
+    display: flex;
+    flex-direction: row;
+    margin-left: 350px;
+    justify-content: space-evenly;
+}

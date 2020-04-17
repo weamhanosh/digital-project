@@ -89,7 +89,7 @@ router.post('/upload', function (req, res) {
           }
         }
         
-        let answer = new AnswerModel({text: content, analysis_as_is: data, analysed_text_arr: arr, line_length_arr: line_length_arr, newline_counter: content.split('\n').length});
+        let answer = new AnswerModel({text: content, analysis_as_is: data.split(" unspecified").join(""), analysed_text_arr: arr, line_length_arr: line_length_arr, newline_counter: content.split('\n').length});
         answer
         .save(answer)
         .then(() => {

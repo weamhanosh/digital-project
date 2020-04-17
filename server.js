@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require('cors');
 
 const editor = require('./routes/api/editor');
+const files = require('./routes/api/files');
 
 const app = express();
 
@@ -23,6 +24,7 @@ mongoose
     .catch(err => console.log(err));
 
 app.use('/api', editor)
+app.use('/api', files)
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production'){

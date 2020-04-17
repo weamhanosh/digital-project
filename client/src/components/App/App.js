@@ -7,6 +7,8 @@ import MyAnalyzeButton from "../MyAnalyzeButton";
 import MyPopover from "../MyPopover";
 import MyFilter from "../MyFilter";
 import MyDownloadFile from '../MyDownloadFile';
+import MyFileUpload from '../MyFileUpload';
+import MyRadio from '../MyRadio';
 import { Button, Result, Icon, Popover } from 'antd';
 
 class App extends React.Component {
@@ -38,7 +40,13 @@ class App extends React.Component {
                     >
                         <Icon type="question-circle" />
                     </Popover>
-                <MyEditor/>
+                <MyRadio/>
+                {!this.props.render_editor &&
+                    <MyFileUpload/>
+                }
+                {this.props.render_editor &&
+                    <MyEditor/>
+                }
                 <MyFilter/>
                 <MyAnalyzeButton/>
                 {this.props.done &&
@@ -63,6 +71,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        render_editor: state['myRadio'].get('render_editor'),
         failed: state['myAnalyzeButton'].get('failed'),
         done: state['myAnalyzeButton'].get('done'),
     }

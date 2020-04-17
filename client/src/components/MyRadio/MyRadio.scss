@@ -4,13 +4,9 @@
     width: 1300px;
 }
 
-p {font-size: 17px}
+p {font-size: 10px}
 
-mark {
-    background-color: rgb(255, 0, 255);
-    // color: black;
-  }
-
+.tab {position:absolute;left:150px; }
 .lines{
     width: 1252px;
     display: flex;
