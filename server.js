@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const path = require('path');
 const cors = require('cors');
 
 const editor = require('./routes/api/editor');
@@ -23,22 +22,10 @@ mongoose
     .then(() => console.log('connected to database!'))
     .catch(err => console.log(err));
 
-app.use('/api', editor)
-app.use('/api', files)
-
-// Serve static assets if in production
-if(process.env.NODE_ENV === 'production'){
-    // Set static folder
-    app.use(express.static('digital-project-front-end/build'));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'digital-project-front-end', 'build', 'index.html'));
-    });
-}
+app.use('/api/upload', editor)
+app.use('/api/uploadFiles', files)
 
 const port = process.env.PORT || 8000;
 
 app.listen(port,
     () => console.log(`Listening on port ${port}!`));
-
-

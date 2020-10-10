@@ -30,7 +30,7 @@ async function all(content, curr_id){
   return data;
 }
 
-router.post('/upload', function (req, res) {
+router.post('/', function (req, res) {
 
   let content = req.body.text;
           

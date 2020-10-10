@@ -40,7 +40,7 @@ async function get_server_responses(texts){
   return server_responses;
 }
 
-router.post('/uploadFiles', function (req, res) {
+router.post('/', function (req, res) {
 
   let names = req.body.names;
   let texts = req.body.texts;
