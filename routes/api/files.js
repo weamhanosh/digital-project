@@ -145,22 +145,4 @@ router.post('/uploadFiles', function (req, res) {
   })
 });
 
-router.post('/downloadFiles', function (req, res) {
-
-  let content = req.body.text;
-          
-  AnswerModel
-  .findOne({text: content})
-  .then(doc => {
-    if (doc != null) {
-      console.log('text found in db!');
-      res.json(doc.analysis_as_is);
-    } else {
-      console.log("no entry to download")
-    }
-  });
-  
-});
-
-
 module.exports = router;
