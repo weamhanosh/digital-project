@@ -47,13 +47,6 @@ function failureFilesAction(){
   }
 }
 
-function emptyFilesAction(){
-  return {
-    type: MyAnalyzeButtonActionsConstants.EMPTY_FILES_ACTION
-  }
-}
-
-
 let MyAnalyzeButtonActions = {
   uploadAction,
   uploadFilesAction,
@@ -61,7 +54,6 @@ let MyAnalyzeButtonActions = {
   doneFilesAction,
   failureAction,
   failureFilesAction,
-  emptyFilesAction
 };
 
 export default MyAnalyzeButtonActions;

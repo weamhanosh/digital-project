@@ -7,7 +7,6 @@ function changeInput(option){
   }
 }
 
-
 let MyRadioActions = {
   changeInput
 };

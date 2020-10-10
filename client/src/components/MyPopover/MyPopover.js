@@ -152,7 +152,6 @@ class MyPopover extends React.Component {
     words_renderer_array(answers, file_names, text_array){
         let res = [];
         for (let i = 0; i < answers.length; i++) {
-            // console.log(answers[i])
             res[i] = 
             <div>
                 
@@ -167,12 +166,10 @@ class MyPopover extends React.Component {
                     trigger="hover"
                     >
                         <h3 style={{color: "#2e81ff", direction: 'rtl'}}>{file_names[i]}</h3>
-                    {/* <p style={{color: "#2e81ff", direction: 'rtl'}}>{file_names[i]}</p> */}
                 </Popover>
                 {this.words_renderer(answers[i], file_names[i])}
             </div>
         }
-        // console.log(res);
         return res;
     }
     

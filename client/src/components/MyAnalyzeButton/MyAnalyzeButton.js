@@ -3,7 +3,6 @@ import MyAnalyzeButtonActions from "./actions";
 import {connect} from 'react-redux';
 import {ProgressBar} from 'primereact/progressbar';
 
-
 import './MyAnalyzeButton.scss';
 
 import { Button } from 'antd';
@@ -49,8 +48,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(MyAnalyzeButtonActions.uploadAction(text));
         },
         UploadAndAnalyseFilesEventHandler: (names, texts) => {
-            // console.log(names)
-            // console.log(texts)
             dispatch(MyAnalyzeButtonActions.uploadFilesAction(names, texts));
         }
     }

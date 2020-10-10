@@ -8,12 +8,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    /*animation: App-logo-spin infinite 20s linear;*/
-  }
-}
-
 .App-header {
   background-color: #ffcb9a;
   min-height: 1vh;
@@ -37,15 +31,6 @@
 }
 
 .App-link {
-  /*color: #56fb20;*/
   display: flex;
   flex-direction: row;
 }
-
-.custombar {
-
-  /*background-color: #1976d2;*/
-  /*opacity: 1;*/
-  /*transition: background-color .3s;*/
-}
-

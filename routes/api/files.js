@@ -140,7 +140,6 @@ router.post('/uploadFiles', function (req, res) {
       })
       .catch((e) => {
         console.log(e);
-        // add attempt to restart server
       });
     }
   })

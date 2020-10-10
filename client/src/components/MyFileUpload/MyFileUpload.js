@@ -1,12 +1,7 @@
 import React from 'react';
 import MyFileUploadActions from "./actions";
 import {connect} from 'react-redux';
-// import {ProgressBar} from 'primereact/progressbar';
-
-
 import './MyFileUpload.scss';
-
-// import { Button } from 'antd';
 
 class MyFileUpload extends React.Component {
      
@@ -16,32 +11,16 @@ class MyFileUpload extends React.Component {
             <div className="text_area">
                 <div className="content-section implementation">
                     <p></p>
-                    {/* <Button type="primary" icon="experiment"
-                        disabled={(this.props.render_progress_bar && (!this.props.done)) || (this.props.failed)}
-                        onClick={() => {this.props.UploadAndAnalyseTextEventHandler(this.props.text)}} style={{direction: 'ltr'}}>
-                            נתח
-                    </Button> */}
-                     <input type="file" id="files" style={{width: "370px"}} name="file" multiple={true} accept="text/plain" onChange={this.props.UploadEventHandler}/>
+                    <input type="file" id="files" style={{width: "370px"}} name="file" multiple={true} accept="text/plain" onChange={this.props.UploadEventHandler}/>
                 </div>
                 <p></p>
-                {/* {this.props.render_progress_bar && (!this.props.done) && <ProgressBar mode="indeterminate" style={{height: '6px'}}></ProgressBar>} */}
                 <p></p>
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        // render_progress_bar: state['myFileUpload'].get('render_progress_bar'),
-        // text: state['myEditor'].get('text'),
-        // answer: state['myFileUpload'].get('answer'),
-        // done: state['myFileUpload'].get('done'),
-        // failed: state['myFileUpload'].get('failed')
-    }
-};
-
-async function a(files){
+async function read_files(files){
     let names = [];
     let results = [];
     let tmp = files.target.files;
@@ -61,10 +40,15 @@ async function a(files){
     return {names, results};
 }
 
+const mapStateToProps = (state) => {
+    return {
+    }
+};
+
 const mapDispatchToProps = (dispatch) => {
     return {
         UploadEventHandler: async (files) => {
-            let res = a(files);
+            let res = read_files(files);
             res
             .then((data) => {
                 dispatch(MyFileUploadActions.updateFiles(data.names, data.results));

@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 import sagas from './sagas';
+
 //import theme - change nova-light to other theme as needed
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-import './index.css';
 import App from './components/App/index.js';
 
 //create saga middleware
